@@ -1,0 +1,285 @@
+#slider {
+   margin: 0 auto;
+
+   width: 100%;
+   text-align: center;
+}
+
+#slider input[type=radio] {
+   display: none;
+}
+
+#slider label {
+   cursor: pointer;
+   text-decoration: none;
+}
+
+#overflow {
+   width: 100%;
+   overflow: hidden;
+}
+
+#slide1:checked~#slides .inner {
+   margin-left: 0;
+}
+
+#slide2:checked~#slides .inner {
+   margin-left: -100%;
+}
+
+#slide3:checked~#slides .inner {
+   margin-left: -200%;
+}
+
+#slide4:checked~#slides .inner {
+   margin-left: -300%;
+}
+
+#slides .inner {
+   transition: margin-left 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+   width: 400%;
+   line-height: 0;
+   height: 350px;
+}
+
+#slides .slide {
+   width: 25%;
+   float: left;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 100%;
+   color: #fff;
+}
+
+#slides .slide_1 {
+
+   background: url(../img/uvod/uvod_large_2_640.jpg);
+   background-position: center;
+   background-size: cover;
+}
+
+#slides .slide_2 {
+   background-position: center;
+   background-image: url(../img/uvod/uvod_large_7_640.jpg);
+   background-size: cover;
+}
+
+#slides .slide_3 {
+   background: url(../img/uvod/uvod_large_3_640.jpg);
+   background-position: center;
+   background-size: cover;
+}
+
+#slides .slide_4 {
+   background: url(../img/uvod/uvod_large_6_640.jpg);
+   background-position: center;
+   background-size: cover;
+}
+
+#controls {
+   margin: -180px 0 0 0;
+   width: 100%;
+   padding-left: 10px;
+   padding-right: 10px;
+   z-index: 3;
+   position: relative;
+}
+
+#controls label {
+   transition: opacity 0.2s ease-out;
+   display: none;
+   width: 20px;
+   height: 20px;
+   opacity: .4;
+}
+
+#controls label:hover {
+   opacity: 1;
+}
+
+#slide1:checked~#controls label:nth-child(2),
+#slide2:checked~#controls label:nth-child(3),
+#slide3:checked~#controls label:nth-child(4),
+#slide4:checked~#controls label:nth-child(1) {
+   background: url(https://image.flaticon.com/icons/svg/130/130884.svg) no-repeat;
+   float: right;
+
+   display: block;
+}
+
+#slide1:checked~#controls label:nth-last-child(1),
+#slide2:checked~#controls label:nth-last-child(4),
+#slide3:checked~#controls label:nth-last-child(3),
+#slide4:checked~#controls label:nth-last-child(2) {
+   background: url(https://image.flaticon.com/icons/svg/130/130882.svg) no-repeat;
+   float: left;
+
+   display: block;
+}
+
+#bullets {
+   margin: 9em 0 0;
+   text-align: center;
+}
+
+#bullets label {
+   display: inline-block;
+   width: 20px;
+   height: 20px;
+   border-radius: 100%;
+   border: 3px solid;
+   border-color: var(--white);
+
+   margin: 0 3px;
+}
+
+#slide1:checked~#bullets label:nth-child(1),
+#slide2:checked~#bullets label:nth-child(2),
+#slide3:checked~#bullets label:nth-child(3),
+#slide4:checked~#bullets label:nth-child(4) {
+   background: var(--white);
+}
+
+
+@media only screen and (min-width:640px) {
+
+   #bullets {
+      margin: 16em 0 0;
+   }
+
+   #slides .inner {
+
+      height: 600px;
+   }
+
+   #controls {
+      margin: -300px 0 0 0;
+
+   }
+
+   #slides .slide_1 {
+      background-position: center;
+      background-size: cover;
+      background: url(../img/uvod/uvod_large_2_1080.jpg);
+   }
+
+   #slides .slide_2 {
+      background-image: url(../img/uvod/uvod_large_7_1080.jpg);
+      background-position: center;
+      background-size: cover;
+   }
+
+   #slides .slide_3 {
+      background: url(../img/uvod/uvod_large_3_1080.jpg);
+      background-position: center;
+      background-size: cover;
+   }
+
+   #slides .slide_4 {
+      background: url(../img/uvod/uvod_large_6_1080.jpg);
+      background-position: center;
+      background-size: cover;
+   }
+
+}
+
+@media only screen and (min-width:1080px) {
+   #slides .inner {
+
+      height: 750px;
+   }
+
+   #controls {
+      margin: -375px 0 0 0;
+
+   }
+
+   #bullets {
+      margin: 20em 0 0;
+
+   }
+
+   #slides .slide_1 {
+
+      background: url(../img/uvod/uvod_large_2_1920.jpg);
+      background-position: center;
+      background-size: cover;
+   }
+
+   #slides .slide_2 {
+      background-image: url(../img/uvod/uvod_large_7_1920.jpg);
+      background-position: center;
+      background-size: cover;
+   }
+
+   #slides .slide_3 {
+      background: url(../img/uvod/uvod_large_3_1920.jpg);
+      background-position: center;
+      background-size: cover;
+   }
+
+   #slides .slide_4 {
+      background: url(../img/uvod/uvod_large_6_1920.jpg);
+      background-position: center;
+      background-size: cover;
+   }
+}
+
+@media only screen and (min-width:1920px) {
+   #slides .inner {
+
+      height: 900px;
+   }
+
+   #bullets {
+      margin: 29em 0 0;
+
+   }
+
+   #controls {
+      margin: -500px 0 0 0;
+
+   }
+
+   #slides .slide_1 {
+
+      background: url(../img/uvod/uvod_large_2_2560.jpg);
+      background-position: center;
+      background-size: cover;
+   }
+
+   #slides .slide_2 {
+      background-image: url(../img/uvod/uvod_large_7_2560.jpg);
+      background-position: center;
+      background-size: cover;
+   }
+
+   #slides .slide_3 {
+      background: url(../img/uvod/uvod_large_3_2560.jpg);
+      background-position: center;
+      background-size: cover;
+   }
+
+   #slides .slide_4 {
+      background: url(../img/uvod/uvod_large_6_large.jpg);
+      background-position: center;
+      background-size: cover;
+   }
+}
+
+@media only screen and (min-width:2560px) {
+
+   #slides .slide_1 {
+
+      background: url(../img/uvod/uvod_large_2_3440.jpg);
+      background-position: center;
+      background-size: cover;
+   }
+
+   #slides .slide_2 {
+      background-image: url(../img/uvod/uvod_large_7_3440.jpg);
+      background-position: center;
+      background-size: cover;
+   }
+}

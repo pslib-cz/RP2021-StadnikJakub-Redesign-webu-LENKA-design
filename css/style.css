@@ -1,0 +1,916 @@
+html {
+    scroll-behavior: smooth;
+    min-height: 100vh;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+.max-width {
+    max-width: 1490px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: normal;
+    padding: 10px;
+
+}
+
+
+/* Hamburger */
+.hamburger {
+    height: 90px;
+    width: 100%;
+    background-color: var(--white);
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 10px;
+
+}
+
+.nav-list {
+    position: absolute;
+    right: 0;
+    height: 0vh;
+    width: 120px;
+    top: 75px;
+    background: var(--white);
+
+    text-align: right;
+    z-index: 1000;
+    transition: all .5s;
+}
+
+.nav-list li {
+    opacity: 0;
+    display: none;
+    line-height: 30px;
+    margin: 20px 0;
+    transition: all .5s;
+    border-bottom: solid 3px var(--gray);
+
+    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-left: 10px;
+
+}
+
+.nav-list li a {
+    color: var(--dark-gray);
+    padding: 10px;
+    padding-left: 0;
+
+}
+
+.nav-list li a.active,
+.nav-list li a:hover {
+    opacity: 40%;
+    transition: 0.5s;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+    display: block;
+    width: 36px;
+    height: 6px;
+    border-radius: 3px;
+    background-color: var(--dark-gray);
+    margin: 5px 0;
+    transition: 0.4s;
+}
+
+.change .bar1 {
+    transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .bar2 {
+    opacity: 0;
+}
+
+.change .bar3 {
+    transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+}
+
+.burger {
+    width: 36px;
+    height: 6px;
+    color: var(--dark-gray);
+}
+
+.hamburger-btn {
+    display: block;
+    margin: auto;
+    float: right;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+#check {
+    display: none;
+
+}
+
+#check:checked~.nav-list {
+    height: 350px;
+    float: right;
+
+}
+
+#check:checked~.nav-list li {
+    display: block;
+    transition-delay: 2s;
+    opacity: 1;
+
+}
+
+/* Služby */
+.description {
+
+
+    margin-top: 40px;
+}
+
+.description figure {
+    position: relative;
+    margin: 10px;
+
+}
+
+.description img {
+    width: 300px;
+}
+
+.description figcaption {
+    display: flex;
+    font-weight: 700;
+    font-size: 24px;
+    color: var(--dark-gray);
+    position: absolute;
+    left: 50%;
+    margin-left: -119.5px;
+    top: 50%;
+    margin-top: -89.5px;
+    height: 179px;
+    background: var(--white);
+    align-items: center;
+    justify-content: center;
+    width: 239px;
+    text-align: center;
+    padding: 1em;
+
+}
+
+.description figcaption a {
+    padding: 80px;
+    color: var(--dark-gray);
+}
+
+.description .opacity {
+    opacity: .6;
+}
+
+/* horizontal scroll */
+.sluzby a:hover img,
+a:hover h2 {
+    opacity: .4;
+    transition: 0.5s;
+
+}
+
+.scroll {
+    display: flex;
+    overflow-x: auto;
+    scrollbar-width: 0px;
+}
+
+.texty {
+
+    margin: 10px;
+    margin-top: 40px;
+    max-width: 1200px;
+}
+
+
+
+.citat {
+    padding: 20px;
+    padding-bottom: 10px;
+    background-color: var(--white);
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+}
+
+.citat p {
+    font-weight: 300;
+}
+
+.citat p:last-child {
+    font-weight: 700;
+    text-align: right;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.inside {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#o-mne {
+    margin-top: 40px;
+    display: flex;
+    flex-shrink: 0;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.portret+div {
+    max-width: 520px;
+
+}
+
+#o-mne {
+
+    margin: auto;
+    padding: 10px;
+    margin-top: 40px;
+    align-items: center;
+}
+
+#o-mne .portret {
+    width: 250px;
+    height: 250px;
+    border-radius: 100%;
+    margin-bottom: 40px;
+    margin: auto;
+    margin-bottom: 20px;
+
+}
+
+/* Footer */
+
+.main-footer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: auto;
+    background-color: var(--white);
+    margin-top: 40px;
+
+}
+
+.main-footer ul li a {
+    color: inherit;
+}
+
+.main-footer ul li a:hover {
+    text-decoration: underline;
+}
+
+.main-footer ul {
+    margin: 10px;
+
+    text-align: center;
+}
+
+.main-footer ul li {
+    font-size: 14px;
+    font-weight: 300;
+    padding: 3px;
+
+}
+
+.main-footer ul li:first-child {
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.ikons {
+    display: flex;
+    justify-content: center;
+
+}
+
+.ikons a {
+    margin-left: 25px;
+    margin-right: 25px;
+    margin: 10px;
+}
+
+
+
+.up img {
+    transform: rotate(-90deg);
+    opacity: .4;
+
+}
+
+.up img:hover {
+    opacity: 1;
+}
+
+.up {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sluzby {
+    margin: 10px;
+
+}
+
+.sluzby figure {
+    width: 300px;
+    height: 225px;
+    background-color: var(--white);
+    flex-shrink: 0;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.sluzby figure figcaption {
+    margin-top: 20px;
+    margin-bottom: 25px;
+}
+
+.sluzby figure img {
+    width: 120px;
+    margin-bottom: 10px;
+}
+
+.foto_sluzby {
+    width: 245px;
+    height: 245px;
+    margin: 6PX;
+    flex-shrink: 0;
+    background-position: center;
+    object-fit: cover;
+    object-position: center;
+}
+
+.sluzby_galerie {
+    flex-shrink: 0;
+    display: flex;
+    overflow-x: auto;
+    scrollbar-width: 0px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+}
+
+.foto_sluzby_1 {
+    margin-left: 0;
+}
+
+.foto_sluzby_5 {
+    margin-right: 0;
+}
+
+.sluzby_navrh {
+
+
+    max-width: 1310px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.sluzby_realizace {
+    margin: 40px;
+}
+
+.sluzby_realizace section .galerie {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.sluzby_foto {
+    width: 300px;
+    height: 225px;
+    margin: 6px;
+    background-position: center;
+    flex-shrink: 0;
+    background-size: cover;
+    object-fit: cover;
+    object-position: center;
+}
+
+.galerie {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+/* Ceník */
+
+
+.text-block p {
+    padding: 5px;
+
+}
+
+
+
+.types p {
+    padding: 10px;
+}
+
+.text-block li {
+    width: 100%;
+
+
+}
+
+.price li {
+    min-height: 44px;
+    font-size: 14px;
+
+}
+
+.text-block .price-h3 {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.cena {
+    width: 120px;
+}
+
+.seznam {
+    padding: 20px;
+}
+
+.seznam li {
+    list-style: initial;
+
+}
+
+.price ul li {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.money {
+    text-align: right;
+}
+
+
+
+
+
+/* Blog */
+.blog-box figcaption .blog-img {
+    width: 300px;
+    height: 225px;
+    margin-left: auto;
+    margin-right: auto;
+    flex-shrink: 0;
+    background-position: center;
+
+}
+
+.blog-box figcaption .blog-name {
+    position: relative;
+    top: 160px;
+    font-size: 1.2em;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.4);
+    padding: 5px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.blog-box {
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.blog-box figcaption p {
+    padding: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.pozvanka-block p {
+    margin: 10px;
+}
+
+.blog-box figcaption a {
+    color: var(--dark-gray);
+    font-weight: 700;
+}
+
+.blog-box figcaption a:hover {
+    color: var(--red);
+
+}
+
+.poukazka {
+    margin-top: 30px;
+    width: 100%;
+    height: 640px;
+    background-image: url(../img/blog/poukazka-LenkaDesign_large.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+
+}
+
+.color-icon * {
+    fill: #155;
+}
+
+address {
+    font-style: inherit;
+}
+
+.chalupa-clanek a img {
+    max-height: 200px;
+    margin: 10px;
+}
+
+.chalupa-clanek {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+
+
+.reference {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.reference-box {
+    max-width: 450px;
+
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: var(--white);
+    margin: 20px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 6px;
+}
+
+.reference-box img {
+    order: -1;
+    max-height: 250px;
+    max-width: 330px;
+    width: 100%;
+}
+
+.reference-box figcaption {
+    margin: 10px;
+}
+
+.reference a {
+    color: var(--red);
+
+}
+
+.reference a:hover {
+    font-weight: bold;
+    transition: 0.5s;
+}
+
+
+
+
+
+
+
+@media only screen and (min-width:640px) {
+    .scroll {
+        flex-wrap: wrap;
+        overflow-x: 0;
+    }
+
+    .description {
+
+        margin: 0px;
+        margin-top: 40px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .description figure {
+
+        margin: 10px;
+
+    }
+
+    .main-footer {
+        flex-direction: row;
+    }
+
+    .main-footer ul {
+        text-align: left;
+    }
+
+    .ikons {
+        flex-direction: column;
+    }
+
+    .ikons div {
+        margin-top: 25px;
+        margin-bottom: 25px;
+    }
+
+    .o_mne_text {
+        margin-left: 40px;
+    }
+
+    .sluzby {
+        display: flex;
+        justify-content: center;
+        margin-right: auto;
+        margin-left: auto;
+        max-width: 1100px;
+    }
+
+    .cenik {
+        font-size: 1em;
+    }
+
+    .blog-box figcaption {
+        display: flex;
+    }
+
+    .blog-box figcaption .blog-img {
+        width: 400px;
+        height: 300px;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+    }
+
+    .blog-box figcaption .blog-name {
+
+        top: 240px;
+
+
+
+    }
+
+    .price li {
+        font-size: 16px;
+
+    }
+
+
+
+
+
+}
+
+@media only screen and (min-width:920px) {
+    .hamburger-btn {
+        display: none;
+    }
+
+    .nav-list {
+        position: relative;
+        height: 90px;
+        top: 0;
+        background: none;
+        float: right;
+        text-align: right;
+        margin-right: 10px;
+        transition: none;
+        width: 100%;
+
+    }
+
+    .nav-list li {
+        display: inline-block;
+        opacity: 1;
+        line-height: 90px;
+        margin: 0 10px;
+        transition: none;
+        border: 0;
+    }
+
+    .nav-list li a.active,
+    .nav-list li a:hover {
+        opacity: 40%;
+    }
+
+    .description figure {
+
+        margin: 15px;
+
+    }
+
+    .description figcaption {
+
+        opacity: 0;
+    }
+
+    #o-mne {
+
+        flex-direction: row;
+    }
+
+    .foto_sluzby_1 {
+        margin-left: 6px;
+    }
+
+    .sluzby_galerie {
+        flex-shrink: 0;
+        display: flex;
+        flex-wrap: wrap;
+        overflow-x: 0;
+        scrollbar-width: 0px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+
+    }
+
+    .description figure:hover figcaption {
+        opacity: 1;
+        transition: 0.75s;
+
+    }
+
+
+
+    .druhy {
+        max-width: 1400px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .sluzby figure figcaption {
+        margin-top: 0;
+    }
+
+    .sluzby_foto {
+        width: 400px;
+        height: 300px;
+    }
+
+    .blog-box figcaption {
+        display: block;
+    }
+
+    .blog-box {
+        max-width: 400px;
+        margin: 20px;
+    }
+
+    .blog {
+        max-width: 1400px;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+    }
+
+
+
+    .footer-down {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+    }
+
+
+
+
+
+
+}
+
+@media only screen and (min-width:1420px) {
+    .reference {
+        justify-content: left;
+    }
+}
+
+@media only screen and (min-height:1260px) and (min-width: 920px) {
+    .footer-down {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+
+    }
+}
+
+@media only screen and (min-height:1260px) {
+    .footer-down {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+    }
+
+    .nav-list li {
+        margin: 0 5px;
+    }
+
+}
+
+@media only screen and (min-width:1920px) {
+    .description {
+
+        margin: 0px;
+        margin-top: 80px;
+        max-width: 100%;
+    }
+
+    .footer-down {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+    }
+
+
+
+
+    .portret+div {
+        max-width: 900px;
+
+    }
+
+    .druhy {
+        max-width: 1400px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+}
+
+@media only screen and (max-height:1260px) and (min-width: 2560px) {
+    .footer-down {
+        position: relative;
+
+    }
+}
+
+@media only screen and (min-height:1080px) and (min-width: 920px) {
+    .footer-down {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+
+/* Blog-img */
+.blog-box figcaption .blog-img-eshopy {
+    background-image: url(../img/blog/blog_eshopy.jpg);
+}
+
+.blog-box figcaption .blog-img-home-office {
+    background-image: url(../img/blog/blog_home_office.jpg);
+}
+
+.blog-box figcaption .blog-img-jaro-v-interieru {
+    background-image: url(../img/blog/blog_jaro_v_interieru.jpg);
+}
+
+.blog-box figcaption .blog-img-rolety-den {
+    background-image: url(../img/blog/rolety_den_a_noc.jpg);
+}
+
+.blog-box figcaption .blog-img-vstupni-prostory {
+    background-image: url(../img/blog/blog_vstupni_prostory.jpg);
+}
+
+.blog-box figcaption .blog-img-detske-pokoje {
+    background-image: url(../img/blog/blog_detske_pokoje.jpg);
+}
+
+.blog-box figcaption .blog-img-koupelny {
+    background-image: url(../img/blog/blog_koupelny.jpg);
+}
